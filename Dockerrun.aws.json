@@ -5,23 +5,27 @@
       "name": "client",
       "image": "antonkorotkoff/multi-client",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "server",
       "image": "antonkorotkoff/multi-server",
       "hostname": "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "worker",
       "image": "antonkorotkoff/multi-worker",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
       "image": "antonkorotkoff/multi-nginx",
       "essential": true,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
